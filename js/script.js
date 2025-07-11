@@ -77,26 +77,6 @@ function toggleTaskCompletion(id) {
 }
 
 // Function to filter task 
-{function filterTasks() {
-    const filterInput = document.getElementById('filter-input').value.toLowerCase();
-    const filteredTasks = tasks.filter(task => task.task.toLowerCase().includes(filterInput));
-    
-    const taskList = document.getElementById('task-list');
-    taskList.innerHTML = ''; // Clear the current task list 
-
-    filteredTasks.forEach(element => {
-        const taskItem = `
-        <div class="flex justify-between items-center p-[8px] border-b">
-            <div class="flex flex-col">
-                <span class="text-lg">${element.task}</span>
-                <span class="text-sm text-gray-500>${element.dueDate}</span>
-            </div>
-            <button class="bg-green-500 text-white p-[4px] rounded" onclick="toggleTaskCompletion(${element.id})">${element.completed ? 'Undo' : 'Complete'}</button>
-            <button class="bg-red-500 text-white p-[4px] rounded" onclick="deleteTask(${element.id})">Delete</button>
-        </div>
-        `;
-        taskList.innerHTML += taskItem;
-    });
-
+{
 }
 
